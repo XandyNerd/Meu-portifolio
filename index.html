@@ -27,7 +27,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">Portfólio<span class="dot">.</span></a>
+            <a href="#" class="logo">Alexandresilva<Pspan class="dot">.dev</span></a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">Sobre</a></li>
@@ -139,27 +139,23 @@
 
             <!-- Profile Photo + Code Snippet -->
             <div class="hero-image">
-                <div class="hero-photo-wrapper">
-                    <img src="assets/minhafoto.jpg" alt="Alexandre Silva Ferreira" class="hero-photo">
+                <div class="hero-floating-group">
+                    <div class="speech-bubble" id="speechBubble">Bora codar!</div>
+                    <div class="hero-photo-wrapper" id="photoWrapper">
+                        <img src="assets/perfil03.png" alt="Alexandre - Avatar" class="hero-photo photo-avatar active">
+                        <img src="assets/realpng.png" alt="Alexandre Silva Ferreira" class="hero-photo photo-real">
+                    </div>
                 </div>
-                <div class="code-snippet">
+                <div class="code-snippet" id="codeSnippet">
                     <div class="code-dots">
                         <span class="dot-red"></span>
                         <span class="dot-yellow"></span>
                         <span class="dot-green"></span>
+                        <span class="snippet-title">Inicio.java</span>
                     </div>
-                    <div class="code-body">
-                        <p><span class="code-cyan">public class</span> <span class="code-white">Inicio</span> {</p>
-                        <p class="indent-1"><span class="code-cyan">public static void</span> <span
-                                class="code-white">main</span>(<span class="code-gray">String[] args</span>) {</p>
-                        <p class="indent-2">System.out.<span class="code-white">println</span>(<span
-                                class="code-green">"Olá, Mundo!"</span>);</p>
-                        <p class="indent-1">}</p>
-                        <p>}</p>
-                        <p class="code-comment">// Foi aqui que tudo começou.</p>
-                    </div>
+                    <div class="code-body" id="codeBody"></div>
+                    <div class="code-terminal" id="codeTerminal"></div>
                 </div>
-                <!-- Floating Code Snippet -->
 
             </div>
         </div>

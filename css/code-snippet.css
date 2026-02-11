@@ -1,2 +1,206 @@
-/* Code Snippet Animation Styles */
-/* Will be populated when implementing the typing animation */
+/* =============================================
+   Code Snippet Animation - Styles
+   ============================================= */
+
+/* Container */
+.code-snippet {
+    position: absolute;
+    top: 85%;
+    right: -40px;
+    background: rgba(13, 17, 23, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(48, 54, 61, 0.8);
+    border-radius: 12px;
+    padding: 0;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.72rem;
+    line-height: 1.7;
+    width: 340px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    animation: floatSnippet 8s ease-in-out infinite;
+    overflow: hidden;
+}
+
+@keyframes floatSnippet {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Header with dots */
+.code-dots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px;
+    background: rgba(30, 35, 42, 0.9);
+    border-bottom: 1px solid rgba(48, 54, 61, 0.6);
+}
+
+.dot-red,
+.dot-yellow,
+.dot-green {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.dot-red {
+    background: #ff5f57;
+}
+
+.dot-yellow {
+    background: #febc2e;
+}
+
+.dot-green {
+    background: #28c840;
+}
+
+.snippet-title {
+    margin-left: auto;
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.35);
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.02em;
+}
+
+/* Code editor area */
+.code-body {
+    padding: 14px 16px 8px;
+    min-height: 90px;
+    color: #e6edf3;
+}
+
+.code-body .line {
+    margin: 0;
+    white-space: pre;
+    min-height: 1.7em;
+}
+
+/* Terminal area */
+.code-terminal {
+    padding: 0 16px 14px;
+    border-top: 1px solid rgba(48, 54, 61, 0.4);
+    margin-top: 4px;
+    display: none;
+    color: #8b949e;
+    font-size: 0.68rem;
+}
+
+.code-terminal.visible {
+    display: block;
+}
+
+.code-terminal .term-line {
+    margin: 0;
+    white-space: pre;
+    min-height: 1.5em;
+    padding-top: 4px;
+}
+
+/* Blinking cursor */
+.cursor {
+    display: inline-block;
+    width: 7px;
+    height: 13px;
+    background: var(--accent-color, #00f2ff);
+    margin-left: 1px;
+    vertical-align: text-bottom;
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Syntax highlighting */
+.syn-keyword {
+    color: #ff7b72;
+}
+
+/* public, class, static, void */
+.syn-class {
+    color: #79c0ff;
+}
+
+/* Inicio, String, System */
+.syn-string {
+    color: #a5d6ff;
+}
+
+/* "Olá, Mundo!" */
+.syn-method {
+    color: #d2a8ff;
+}
+
+/* main, println */
+.syn-param {
+    color: #ffa657;
+}
+
+/* args */
+.syn-bracket {
+    color: #e6edf3;
+}
+
+/* { } ( ) */
+.syn-default {
+    color: #e6edf3;
+}
+
+/* default text */
+
+/* Terminal colors */
+.term-prompt {
+    color: #7ee787;
+}
+
+/* $ / > */
+.term-cmd {
+    color: #e6edf3;
+}
+
+/* command text */
+.term-error {
+    color: #f85149;
+}
+
+/* error messages */
+.term-success {
+    color: #7ee787;
+}
+
+/* success output */
+.term-output {
+    color: #d2a8ff;
+}
+
+/* program output */
+.term-comment {
+    color: rgba(255, 255, 255, 0.3);
+    font-style: italic;
+}
+
+/* Responsive: hide on mobile */
+@media (max-width: 968px) {
+    .code-snippet {
+        display: none;
+    }
+}
