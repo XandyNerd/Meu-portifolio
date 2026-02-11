@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# System
+Thumbs.db
+.DS_Store
+
+# Rascunhos / Ideias
+IDEIA/

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Profissional | Alexandre Silva Ferreira</title>
+    <meta name="description"
+        content="Portfólio de Alexandre Silva Ferreira - Desenvolvedor e Criativo. Confira meus projetos e habilidades.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/code-snippet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="space-background">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Portfólio<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact" class="btn-primary">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <!-- Availability Badge -->
+                <div class="availability-badge">
+                    <span class="pulse-dot"></span>
+                    <span>Disponível para Projetos</span>
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="hero-title">
+                    Desenvolvedor focado em
+                    <span class="highlight">sistemas reais</span> e
+                    <span class="highlight">integrações</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="hero-subtitle">
+                    Experiência prática com controle financeiro, integrações com API e soluções utilizadas por negócios
+                    reais.
+                </p>
+
+                <!-- Tech Stack Carousel -->
+                <div class="stack-carousel" id="stackCarousel">
+                    <div class="carousel-slides">
+                        <!-- Slide 1: Backend -->
+                        <div class="carousel-slide active">
+                            <span class="carousel-category">Backend</span>
+                            <div class="carousel-techs">
+                                <span><i class="fab fa-java"></i> Java</span>
+                                <span class="tech-separator">•</span>
+                                <span><i class="fab fa-node-js"></i> Node.js</span>
+                                <span class="tech-separator">•</span>
+                                <span><i class="fas fa-plug"></i> REST APIs</span>
+                                <span class="tech-separator">•</span>
+                                <span><i class="fab fa-git-alt"></i> Git</span>
+                            </div>
+                        </div>
+                        <!-- Slide 2: Frontend -->
+                        <div class="carousel-slide">
+                            <span class="carousel-category">Frontend</span>
+                            <div class="carousel-techs">
+                                <span><i class="fab fa-js"></i> JavaScript</span>
+                                <span class="tech-separator">•</span>
+                                <span><i class="fab fa-html5"></i> HTML</span>
+                                <span class="tech-separator">•</span>
+                                <span><i class="fab fa-css3-alt"></i> CSS</span>
+                            </div>
+                        </div>
+                        <!-- Slide 3: Banco de Dados -->
+                        <div class="carousel-slide">
+                            <span class="carousel-category">Banco de Dados</span>
+                            <div class="carousel-techs">
+                                <span><i class="fas fa-database"></i> MySQL</span>
+                                <span class="tech-separator">•</span>
+                                <span><i class="fas fa-table"></i> Banco Relacional</span>
+                            </div>
+                        </div>
+                        <!-- Slide 4: Mobile -->
+                        <div class="carousel-slide">
+                            <span class="carousel-category">Mobile</span>
+                            <div class="carousel-techs">
+                                <span><i class="fab fa-android"></i> Android</span>
+                                <span class="tech-separator">•</span>
+                                <span><i class="fas fa-code"></i> Kotlin</span>
+                                <span class="tech-separator">•</span>
+                                <span><i class="fab fa-java"></i> Java</span>
+                            </div>
+                        </div>
+                        <!-- Slide 5: Automações & Integrações -->
+                        <div class="carousel-slide">
+                            <span class="carousel-category">Automações & Integrações</span>
+                            <div class="carousel-techs">
+                                <span><i class="fas fa-robot"></i> n8n</span>
+                                <span class="tech-separator">•</span>
+                                <span><i class="fas fa-link"></i> Webhooks</span>
+                                <span class="tech-separator">•</span>
+                                <span><i class="fab fa-whatsapp"></i> WhatsApp API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hero-btns">
+                    <a href="#projects" class="btn-cta">
+                        Ver Projetos em Produção
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn-outline">
+                        Falar sobre Projetos
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Photo + Code Snippet -->
+            <div class="hero-image">
+                <div class="hero-photo-wrapper">
+                    <img src="assets/minhafoto.jpg" alt="Alexandre Silva Ferreira" class="hero-photo">
+                </div>
+                <div class="code-snippet">
+                    <div class="code-dots">
+                        <span class="dot-red"></span>
+                        <span class="dot-yellow"></span>
+                        <span class="dot-green"></span>
+                    </div>
+                    <div class="code-body">
+                        <p><span class="code-cyan">public class</span> <span class="code-white">Inicio</span> {</p>
+                        <p class="indent-1"><span class="code-cyan">public static void</span> <span
+                                class="code-white">main</span>(<span class="code-gray">String[] args</span>) {</p>
+                        <p class="indent-2">System.out.<span class="code-white">println</span>(<span
+                                class="code-green">"Olá, Mundo!"</span>);</p>
+                        <p class="indent-1">}</p>
+                        <p>}</p>
+                        <p class="code-comment">// Foi aqui que tudo começou.</p>
+                    </div>
+                </div>
+                <!-- Floating Code Snippet -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Sou um desenvolvedor apaixonado por tecnologia e inovação. Com experiência em diversas linguagens
+                        e frameworks, busco sempre entregar código limpo e eficiente.</p>
+                    <p>Minha jornada começou com o interesse em como sistemas complexos funcionam por trás das telas.
+                        Desde então, tenho trabalhado em projetos que desafiam minha lógica e criatividade, buscando
+                        sempre a melhor experiência para o usuário.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>0</h3>
+                            <p>Anos de Exp.</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>2+</h3>
+                            <p>Projetos</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>0</h3>
+                            <p>Clientes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">Minhas Habilidades</h2>
+            <div class="skills-grid">
+                <!-- Java -->
+                <div class="skill-card">
+                    <i class="fab fa-java"></i>
+                    <h3>Java</h3>
+                </div>
+                <!-- Android -->
+                <div class="skill-card">
+                    <i class="fab fa-android"></i>
+                    <h3>Android Dev</h3>
+                </div>
+                <!-- HTML5 -->
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                </div>
+                <!-- CSS3 -->
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                </div>
+                <!-- JavaScript -->
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <!-- Database -->
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Banco de Dados</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section certificates" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title">Certificados</h2>
+            <div class="projects-grid"> <!-- Reusing grid style -->
+                <!-- Certificate 2 -->
+                <article class="project-card">
+                    <div class="project-content">
+                        <i class="fas fa-database"
+                            style="font-size: 3rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+                        <h3>Oracle</h3>
+                        <p>Certificação Oracle Database.</p>
+                        <div class="project-links">
+                            <a href="oracle-certificate.pdf" target="_blank"><i class="fas fa-file-alt"></i> Ver
+                                Certificado</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Projetos Recentes</h2>
+
+            <div class="carousel-container">
+                <div class="projects-carousel">
+                    <!-- Project Card 1 -->
+                    <article class="project-card">
+                        <div class="project-img placeholder-img"></div>
+                        <div class="project-content">
+                            <h3>Projeto Exemplo 1</h3>
+                            <p>Uma breve descrição do projeto, as tecnologias usadas e o problema que ele resolve.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Node</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 2 -->
+                    <article class="project-card">
+                        <div class="project-img placeholder-img"></div>
+                        <div class="project-content">
+                            <h3>Projeto Exemplo 2</h3>
+                            <p>Descrição de outro projeto incrível que demonstra suas capacidades técnicas.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 3 -->
+                    <article class="project-card">
+                        <div class="project-img placeholder-img"></div>
+                        <div class="project-content">
+                            <h3>Projeto Exemplo 3</h3>
+                            <p>Mais um projeto para fechar a linha com chave de ouro.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Django</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Project Card 4 (Example for scrolling) -->
+                    <article class="project-card">
+                        <div class="project-img placeholder-img"></div>
+                        <div class="project-content">
+                            <h3>Projeto Futuro</h3>
+                            <p>Espaço reservado para seus futuros projetos incríveis.</p>
+                            <div class="project-tags">
+                                <span>Vue</span>
+                                <span>Firebase</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container contact-container">
+            <h2 class="section-title">Vamos Conversar?</h2>
+            <p class="contact-text">Estou disponível para novos projetos e oportunidades. Entre em contato!</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>XandyNerd@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/alexandre-silva-ferreira-8a0105291/"
+                            target="_blank">Alexandre Silva Ferreira</a>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-github"></i>
+                        <span>github.com/seu-usuario</span>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Seu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 Alexandre Silva Ferreira. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/code-snippet.js"></script>
+</body>
+
+</html>
