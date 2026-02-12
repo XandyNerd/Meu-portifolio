@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { text: '.out.', cls: 'syn-default' },
             { text: 'println', cls: 'syn-method' },
             { text: '(', cls: 'syn-bracket' },
-            { text: '"Olá, Mundo!"', cls: 'syn-string' },
+            { text: '"Olá, mundo."', cls: 'syn-string' },
             { text: ');', cls: 'syn-bracket' }
         ], 2);
 
@@ -259,12 +259,9 @@ document.addEventListener('DOMContentLoaded', () => {
         swapToReal();
         await sleep(400);
 
-        await showTermOutput('Olá, Mundo!', 'term-output');
-        await sleep(1200);
-
-        // Comment
-        await showTermOutput('', 'term-cmd');
-        await showTermOutput('// E foi assim que tudo começou.', 'term-comment');
+        await showTermOutput('Olá, mundo.', 'term-output');
+        await sleep(800);
+        await showTermOutput('Iniciando missão...', 'term-success');
 
         // Keep real photo visible for a good while (equal time to avatar)
         await sleep(8000);

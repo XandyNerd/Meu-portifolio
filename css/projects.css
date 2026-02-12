@@ -1,0 +1,798 @@
+/* ═══════════════════════════════════════════════
+   Projects Section — IDEIA Reference Design
+   ═══════════════════════════════════════════════ */
+
+/* Section wrapper */
+.projects-section {
+    padding: 96px 0;
+    background-color: #0d1117;
+    position: relative;
+    border-top: 1px solid #30363d;
+}
+
+.projects-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+@media (min-width: 640px) {
+    .projects-container {
+        padding: 0 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects-container {
+        padding: 0 32px;
+    }
+}
+
+/* ── Scroll-triggered Reveal Animations ── */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-left.revealed,
+.reveal-right.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Header */
+.projects-header {
+    margin-bottom: 64px;
+}
+
+.projects-title {
+    font-family: var(--font-heading, 'Poppins', sans-serif);
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .projects-title {
+        font-size: 2.25rem;
+    }
+}
+
+.projects-title span {
+    color: #06b6d4;
+}
+
+.projects-subtitle {
+    color: #8b949e;
+    font-size: 1.125rem;
+    max-width: 42rem;
+    line-height: 1.6;
+}
+
+/* ── Cards Container ── */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+/* ── Individual Card ── */
+.project-card {
+    position: relative;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: rgba(6, 182, 212, 0.5);
+}
+
+/* ── Grid: 12 columns on desktop ── */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+@media (min-width: 1024px) {
+    .project-grid {
+        grid-template-columns: 5fr 7fr;
+    }
+}
+
+/* ── Image Area ── */
+.project-image {
+    position: relative;
+    height: 256px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: linear-gradient(to bottom right, #1f2937, #000);
+}
+
+@media (min-width: 1024px) {
+    .project-image {
+        height: auto;
+        min-height: 380px;
+    }
+}
+
+/* Custom scrollbar for image area */
+.project-image::-webkit-scrollbar {
+    width: 4px;
+}
+
+.project-image::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.project-image::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 2px;
+}
+
+.project-image::-webkit-scrollbar-thumb:hover {
+    background: #8b949e;
+}
+
+/* Slideshow images (position absolute, full width, no horizontal crop) */
+.project-image img.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background: linear-gradient(to bottom right, #1f2937, #000);
+}
+
+.project-image img.slide.active {
+    opacity: 1;
+}
+
+/* Scroll-slide images (GelaCena style: scroll down then transition) */
+.project-image img.scroll-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.project-image img.scroll-slide.active {
+    opacity: 1;
+}
+
+/* First image override: show full image without cropping */
+.project-image img.scroll-slide.no-scroll {
+    object-fit: contain;
+    object-position: center !important;
+}
+
+.project-image img.scroll-slide.scrolling {
+    transition: opacity 1s ease-in-out, object-position 6s ease-in-out;
+    object-position: bottom center;
+}
+
+.project-icon-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-icon-placeholder i,
+.project-icon-placeholder .material-symbols-outlined {
+    font-size: 3.75rem;
+    color: #30363d;
+    transition: color 0.5s ease;
+}
+
+.project-card:hover .project-icon-placeholder i,
+.project-card:hover .project-icon-placeholder .material-symbols-outlined {
+    color: rgba(6, 182, 212, 0.5);
+}
+
+/* ── Status Badge ── */
+.project-status {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 10;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.status-production {
+    background: rgba(34, 197, 94, 0.2);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.status-beta {
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.status-completed {
+    background: rgba(99, 102, 241, 0.2);
+    color: #a78bfa;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.status-concept {
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* ── Mobile Project Mockup ── */
+.mobile-project-image {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+    overflow: hidden;
+}
+
+.mobile-frame {
+    width: 220px;
+    height: 400px;
+    background: #000;
+    border-radius: 24px;
+    border: 6px solid #1f2937;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .mobile-frame {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.mobile-screen {
+    width: 100%;
+    display: block;
+    transition: transform 6s ease-in-out;
+}
+
+.mobile-frame:hover .mobile-screen {
+    transform: translateY(calc(-100% + 400px));
+}
+
+/* Alternating: badge on right side */
+.project-card:nth-child(even) .project-status {
+    left: auto;
+    right: 16px;
+}
+
+/* ── Content Area ── */
+.project-content {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+    .project-content {
+        padding: 40px;
+    }
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .project-content h3 {
+    color: #06b6d4;
+}
+
+/* ── Description ── */
+.project-description {
+    color: #8b949e;
+    margin-bottom: 24px;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.project-description strong {
+    color: #fff;
+}
+
+/* ── Challenge Box ── */
+.project-challenge {
+    background: rgba(13, 17, 23, 0.6);
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    transition: border-color 0.3s ease;
+}
+
+.project-challenge:hover {
+    border-color: rgba(6, 182, 212, 0.3);
+}
+
+.challenge-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.challenge-header i {
+    color: #fbbf24;
+    font-size: 0.85rem;
+}
+
+.project-challenge p {
+    color: #8b949e;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.tech-tag {
+    padding: 4px 12px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    color: #8b949e;
+    font-size: 0.75rem;
+}
+
+/* ── Links ── */
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-case-study {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid #06b6d4;
+    padding-bottom: 2px;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.btn-case-study:hover {
+    color: #06b6d4;
+}
+
+.btn-repo {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #8b949e;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.btn-repo:hover {
+    color: #fff;
+}
+
+/* ── Alternating Layout (even cards: image right) ── */
+@media (min-width: 1024px) {
+    .project-card:nth-child(even) .project-image {
+        order: 2;
+    }
+
+    .project-card:nth-child(even) .project-content {
+        order: 1;
+    }
+}
+
+/* ── Mobile Title (hidden on desktop) ── */
+.project-title-mobile {
+    display: none;
+}
+
+/* ══════════════════════════════════
+   Responsive — Mobile & Tablet
+   ══════════════════════════════════ */
+@media (max-width: 1023px) {
+    .projects-list {
+        gap: 32px;
+    }
+
+    .project-image {
+        height: 220px;
+    }
+
+    .project-content {
+        padding: 24px;
+    }
+
+    .project-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+    }
+
+    .project-tech {
+        margin-bottom: 20px;
+    }
+
+    .project-status {
+        top: 12px;
+        left: 12px;
+        font-size: 0.65rem;
+    }
+
+    .project-card:nth-child(even) .project-status {
+        left: 12px;
+        right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-section {
+        padding: 60px 0;
+    }
+
+    .projects-header {
+        margin-bottom: 40px;
+    }
+
+    .projects-title {
+        font-size: 1.5rem;
+    }
+
+    .projects-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .project-image {
+        height: 180px;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+}
+
+/* ══════════════════════════════════
+   Other Projects — Horizontal Carousel
+   ══════════════════════════════════ */
+.other-projects {
+    margin-top: 80px;
+    padding-top: 48px;
+    border-top: 1px solid #21262d;
+    position: relative;
+    overflow: hidden;
+}
+
+.other-projects-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.other-projects-title {
+    font-family: var(--font-heading, 'Poppins', sans-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.other-projects-title span {
+    color: #06b6d4;
+}
+
+.carousel-nav {
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    background: #161b22;
+    color: #8b949e;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.carousel-btn:hover {
+    border-color: #06b6d4;
+    color: #06b6d4;
+    background: rgba(6, 182, 212, 0.05);
+}
+
+/* Carousel Track — 3 visible cards */
+.carousel-track {
+    display: flex;
+    gap: 24px;
+    overflow: hidden;
+    padding: 16px 0;
+    position: relative;
+}
+
+/* Mini Card */
+.mini-card {
+    flex: 0 0 calc((100% - 48px) / 3);
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    opacity: 0.5;
+    transform: scale(0.95);
+}
+
+.mini-card.visible {
+    opacity: 0.65;
+    transform: scale(0.97);
+}
+
+.mini-card.center {
+    opacity: 1;
+    transform: scale(1.04);
+    border-color: rgba(6, 182, 212, 0.5);
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.1);
+}
+
+.mini-card.center .mini-card-icon i {
+    color: rgba(6, 182, 212, 0.6);
+}
+
+.mini-card:hover {
+    border-color: rgba(6, 182, 212, 0.5);
+}
+
+.mini-card-icon {
+    height: 120px;
+    background: linear-gradient(135deg, #0a0e17, #0d1117, #111827);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.mini-card-icon i {
+    font-size: 2.5rem;
+    color: #30363d;
+    transition: color 0.5s ease;
+}
+
+/* ── Space theme: Starfield on carousel section ── */
+
+.other-projects::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(1px 1px at 5% 15%, rgba(255, 255, 255, 0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 15% 85%, rgba(255, 255, 255, 0.2) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 25% 40%, rgba(255, 255, 255, 0.25) 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 10%, rgba(255, 255, 255, 0.2) 0%, transparent 100%),
+        radial-gradient(1px 1px at 55% 65%, rgba(255, 255, 255, 0.15) 0%, transparent 100%),
+        radial-gradient(1px 1px at 65% 25%, rgba(255, 255, 255, 0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 75% 90%, rgba(255, 255, 255, 0.2) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 85% 50%, rgba(255, 255, 255, 0.25) 0%, transparent 100%),
+        radial-gradient(1px 1px at 95% 75%, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+    animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/* ── Space theme: Animated gradient border on center card ── */
+.mini-card.center {
+    border-color: transparent;
+    background-clip: padding-box;
+    position: relative;
+}
+
+.mini-card.center::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 13px;
+    padding: 1px;
+    background: linear-gradient(135deg, #06b6d4, #8b5cf6, #06b6d4);
+    background-size: 200% 200%;
+    animation: borderGlow 3s ease-in-out infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes borderGlow {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.mini-card-body {
+    padding: 16px 20px 20px;
+}
+
+.mini-card-category {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #06b6d4;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+}
+
+.mini-card-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.mini-card-desc {
+    font-size: 0.8rem;
+    color: #8b949e;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.mini-card-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.mini-card-tech span {
+    padding: 2px 8px;
+    background: #0d1117;
+    border: 1px solid #21262d;
+    border-radius: 3px;
+    color: #8b949e;
+    font-size: 0.65rem;
+}
+
+/* Responsive carousel */
+@media (max-width: 768px) {
+    .mini-card {
+        display: none !important;
+    }
+
+    .mini-card.center {
+        display: block !important;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .mini-card-icon {
+        height: 100px;
+    }
+
+    .other-projects {
+        margin-top: 48px;
+        padding-top: 32px;
+    }
+
+    .other-projects-title {
+        font-size: 1.25rem;
+    }
+
+    .carousel-track {
+        gap: 16px;
+    }
+}
+
+/* Other Projects - Image Scroll */
+.mini-card-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #30363d;
+}
+
+.mini-card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top center;
+    transform: translateY(0);
+}
+
+/* Auto-scroll removed: show top of image */
+.mini-card.center .mini-card-image img {
+    transform: translateY(0);
+    object-fit: cover;
+    object-position: top center;
+    height: 100%;
+}

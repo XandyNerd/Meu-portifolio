@@ -14,6 +14,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/code-snippet.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/sections.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -22,17 +25,18 @@
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
+        <div class="shooting-star"></div>
     </div>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">Alexandresilva<Pspan class="dot">.dev</span></a>
+            <a href="#" class="logo">Alexandresilva<span class="dot">.dev</span></a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#about">Jornada</a></li>
+                <li><a href="#projects">Sistemas</a></li>
+                <li><a href="#approach">Stack</a></li>
                 <li><a href="#contact" class="btn-primary">Contato</a></li>
             </ul>
             <div class="hamburger">
@@ -161,211 +165,487 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
-        <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <div class="stars-bg"></div>
+        <div class="about-container">
+            <div class="about-header" data-scroll>
+                <h2 class="about-title" data-text="🚀 Registro de Jornada">🚀 Registro de Jornada</h2>
+                <span class="about-subtitle">Sobre Mim</span>
+                <div class="title-line"></div>
+            </div>
+
             <div class="about-content">
-                <div class="about-text">
-                    <p>Sou um desenvolvedor apaixonado por tecnologia e inovação. Com experiência em diversas linguagens
-                        e frameworks, busco sempre entregar código limpo e eficiente.</p>
-                    <p>Minha jornada começou com o interesse em como sistemas complexos funcionam por trás das telas.
-                        Desde então, tenho trabalhado em projetos que desafiam minha lógica e criatividade, buscando
-                        sempre a melhor experiência para o usuário.</p>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <h3>0</h3>
-                            <p>Anos de Exp.</p>
+                <div class="about-text" data-scroll>
+                    <p>Sou um desenvolvedor movido por curiosidade, inovação e pela vontade constante de evoluir.</p>
+                    <p>Minha jornada começou ainda no ensino médio, quando iniciei o curso técnico em Desenvolvimento de
+                        Sistemas (2019–2021). Antes mesmo disso, já explorava por conta própria o universo da
+                        programação, tentando entender como softwares eram construídos e como sistemas complexos
+                        funcionavam por trás das interfaces.</p>
+                    <p>Desde então, transformar lógica em solução se tornou minha missão.</p>
+                    <p>Atualmente estou no 6º período de Sistemas de Informação, onde ampliei minha base técnica e
+                        conquistei certificações em instituições como Oracle Academy, AWS, Cisco e Red Hat, fortalecendo
+                        minha visão prática e estratégica da tecnologia.</p>
+                    <p>Além da formação acadêmica, desenvolvo projetos próprios e atuo como freelancer, criando sistemas
+                        para pequenas e médias empresas, sites institucionais e soluções personalizadas. Cada projeto é
+                        uma oportunidade de aprimorar habilidades, enfrentar desafios reais e evoluir como profissional.
+                    </p>
+                    <p class="highlight-text">Acredito que tecnologia vai além do código.<br>É sobre impacto,
+                        experiência e construção contínua.</p>
+                    <p>Sigo aprendendo, experimentando novas abordagens e buscando sempre desenvolver soluções limpas,
+                        escaláveis e bem estruturadas.</p>
+                </div>
+
+                <div class="about-visuals">
+                    <!-- Timeline -->
+                    <div class="timeline" data-scroll>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2019 – 2021</span>
+                                <h3>Curso Técnico</h3>
+                                <p>Desenvolvimento de Sistemas</p>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <h3>2+</h3>
-                            <p>Projetos</p>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2022 – Atual</span>
+                                <h3>Graduação</h3>
+                                <p>Sistemas de Informação</p>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <h3>0</h3>
-                            <p>Clientes</p>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-badge">Certificações Técnicas</span>
+                                <ul class="timeline-list">
+                                    <li>Oracle Academy</li>
+                                    <li>AWS</li>
+                                    <li>Cisco</li>
+                                    <li>Red Hat</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section skills">
-        <div class="container">
-            <h2 class="section-title">Minhas Habilidades</h2>
-            <div class="skills-grid">
-                <!-- Java -->
-                <div class="skill-card">
-                    <i class="fab fa-java"></i>
-                    <h3>Java</h3>
-                </div>
-                <!-- Android -->
-                <div class="skill-card">
-                    <i class="fab fa-android"></i>
-                    <h3>Android Dev</h3>
-                </div>
-                <!-- HTML5 -->
-                <div class="skill-card">
-                    <i class="fab fa-html5"></i>
-                    <h3>HTML5</h3>
-                </div>
-                <!-- CSS3 -->
-                <div class="skill-card">
-                    <i class="fab fa-css3-alt"></i>
-                    <h3>CSS3</h3>
-                </div>
-                <!-- JavaScript -->
-                <div class="skill-card">
-                    <i class="fab fa-js"></i>
-                    <h3>JavaScript</h3>
-                </div>
-                <!-- Database -->
-                <div class="skill-card">
-                    <i class="fas fa-database"></i>
-                    <h3>Banco de Dados</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certificates Section -->
-    <section id="certificates" class="section certificates" style="background-color: var(--bg-secondary);">
-        <div class="container">
-            <h2 class="section-title">Certificados</h2>
-            <div class="projects-grid"> <!-- Reusing grid style -->
-                <!-- Certificate 2 -->
-                <article class="project-card">
-                    <div class="project-content">
-                        <i class="fas fa-database"
-                            style="font-size: 3rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-                        <h3>Oracle</h3>
-                        <p>Certificação Oracle Database.</p>
-                        <div class="project-links">
-                            <a href="oracle-certificate.pdf" target="_blank"><i class="fas fa-file-alt"></i> Ver
-                                Certificado</a>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-badge">Experiência Prática</span>
+                            <p>Desenvolvimento de sistemas e sites institucionais</p>
                         </div>
                     </div>
-                </article>
+
+                    <!-- Stats Embedded in Timeline Column -->
+                    <div class="stats-grid" data-scroll>
+                        <div class="stat-card">
+                            <h3 class="stat-number">+5</h3>
+                            <p class="stat-label">Anos estudando tecnologia (TI)</p>
+                        </div>
+                        <div class="stat-card" id="projects-stat">
+                            <h3 class="stat-number" id="repo-count">25+</h3>
+                            <p class="stat-label">Projetos desenvolvidos</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-number">4</h3>
+                            <p class="stat-label">Certificações</p>
+                        </div>
+                    </div>
+
+                    <!-- Earth Container -->
+                    <div id="earth-container" style="width: 100%; height: 400px; margin-top: 50px;">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section projects">
+    <section id="projects" class="projects-section">
+        <div class="projects-container">
+            <div class="projects-header reveal">
+                <h2 class="projects-title">O que eu já <span>construí</span></h2>
+                <p class="projects-subtitle">Projetos selecionados que demonstram capacidade técnica e resolução de
+                    problemas complexos.</p>
+            </div>
+
+            <div class="projects-list">
+
+                <!-- Project 1: GelaCena -->
+
+                <article class="project-card reveal-left" style="transition-delay: 0.1s;">
+                    <div class="project-grid">
+                        <div class="project-image scroll-slideshow" id="gelacena-slideshow">
+                            <div class="project-status status-production">Em Produção</div>
+                            <img src="Projetos/Gelacena/Gelacena01.png" class="scroll-slide no-scroll active"
+                                alt="GelaCena - Home">
+                            <img src="Projetos/Gelacena/Gelacena02.png" class="scroll-slide"
+                                alt="GelaCena - Monte seu Copo">
+                            <img src="Projetos/Gelacena/gelacena03.png" class="scroll-slide"
+                                alt="GelaCena - Adicionais">
+                            <img src="Projetos/Gelacena/gelacena04.png" class="scroll-slide" alt="GelaCena - Checkout">
+                            <img src="Projetos/Gelacena/gelacena05.png" class="scroll-slide" alt="GelaCena - Gestão">
+                        </div>
+                        <div class="project-content">
+                            <div>
+                                <h3>GelaCena - Delivery de Açaí</h3>
+                                <p class="project-description">
+                                    <strong>O Desafio:</strong> Criar um fluxo de personalização em tempo real com
+                                    cálculo de frete por distância e pagamentos distribuídos.<br>
+                                    <strong>Implementação:</strong> E-commerce completo com APIs Stripe e Abacate Pay,
+                                    integração com Maps para logística e dashboard administrativo para gestão de
+                                    pedidos.
+                                </p>
+                                <div class="project-challenge">
+                                    <div class="challenge-header">
+                                        <i class="fas fa-bolt"></i> <span>Desafio Técnico</span>
+                                    </div>
+                                    <p>Implementação de fluxo de personalização em tempo real com cálculo de frete por
+                                        distância, reduzindo o tempo de resposta da API em 400ms.</p>
+                                </div>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">Stripe API</span>
+                                    <span class="tech-tag">Abacate Pay</span>
+                                    <span class="tech-tag">Maps API</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://gelacena.netlify.app/" target="_blank" class="btn-case-study">
+                                    <i class="fas fa-external-link-alt"></i> Acessar Site
+                                </a>
+                                <a href="https://www.instagram.com/gelacena_ofc/" target="_blank"
+                                    class="btn-case-study">
+                                    <i class="fab fa-instagram"></i> Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: CS Móveis -->
+                <article class="project-card reveal-right" style="transition-delay: 0.2s;">
+                    <div class="project-grid">
+                        <div class="project-image slideshow-container" id="cs-moveis-slideshow">
+                            <div class="project-status status-completed">Concluído</div>
+                            <img src="Projetos/Cs-Moveis/PDV.png" class="slide active" alt="CS Móveis - PDV">
+                            <img src="Projetos/Cs-Moveis/Gestão de produtos02.png" class="slide"
+                                alt="CS Móveis - Produtos">
+                            <img src="Projetos/Cs-Moveis/Gestão de Produtos03.png" class="slide"
+                                alt="CS Móveis - Produtos Detalhes">
+                            <img src="Projetos/Cs-Moveis/Gestãodeprodutos01.png" class="slide"
+                                alt="CS Móveis - Lista Produtos">
+                            <img src="Projetos/Cs-Moveis/Gestãodeclientes01.png" class="slide"
+                                alt="CS Móveis - Clientes">
+                            <img src="Projetos/Cs-Moveis/Funcionarios.png" class="slide" alt="CS Móveis - Funcionários">
+                            <img src="Projetos/Cs-Moveis/Expedição & Entrega.png" class="slide"
+                                alt="CS Móveis - Logística">
+                            <img src="Projetos/Cs-Moveis/Montagem e serviço.png" class="slide"
+                                alt="CS Móveis - Montagem">
+                        </div>
+                        <div class="project-content">
+                            <div>
+                                <h3>CS Móveis - Gestão & Crediário</h3>
+                                <p class="project-description">
+                                    <strong>O Problema:</strong> Lojas de móveis com gestão manual de crediário sofriam
+                                    com inadimplência elevada e lentidão crítica na expedição de mercadorias.<br>
+                                    <strong>A Solução:</strong> Sistema desktop de alta performance com PDV integrado,
+                                    cálculo automatizado de juros, controle de estoque em tempo real e logística
+                                    integrada.
+                                </p>
+                                <div class="project-challenge">
+                                    <div class="challenge-header">
+                                        <i class="fas fa-bolt"></i> <span>Desafio Técnico</span>
+                                    </div>
+                                    <p>Desenvolvimento de módulo financeiro robusto para cálculo de juros, renegociação
+                                        de dívidas e emissão de carnês, garantindo total controle de inadimplência.</p>
+                                </div>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">JavaFX</span>
+                                    <span class="tech-tag">SQLite</span>
+                                    <span class="tech-tag">JasperSoft</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.instagram.com/csmoveisbh" target="_blank" class="btn-case-study"><i
+                                        class="fab fa-instagram"></i> Ver no Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: SportKit App Concept -->
+                <article class="project-card reveal-left" style="transition-delay: 0.3s;">
+                    <div class="project-grid">
+                        <div class="project-image mobile-project-image">
+                            <div class="project-status status-concept"><i class="fas fa-lightbulb"></i> Conceito / Em
+                                Planejamento</div>
+                            <div class="mobile-frame">
+                                <img src="Projetos/screen.png" alt="FutDeal App Interface" class="mobile-screen">
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div>
+                                <h3>FutDeal - O App do Torcedor</h3>
+                                <p class="project-description">
+                                    <strong>A Ideia:</strong> Marketplace mobile-first para venda de kits esportivos com
+                                    gamificação real-time.<br>
+                                    <strong>Diferenciais:</strong> Cashback progressivo, ofertas relâmpago baseadas nos
+                                    times vencedores da rodada e experiência nativa otimizada para iOS e Android.
+                                </p>
+                                <div class="project-challenge">
+                                    <div class="challenge-header">
+                                        <i class="fas fa-layer-group"></i> <span>Arquitetura Mobile</span>
+                                    </div>
+                                    <p>Desenvolvimento focado em performance nativa, utilização de APIs de futebol em
+                                        tempo real e sistema de notificação push segmentado por time do coração.</p>
+                                </div>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React Native</span>
+                                    <span class="tech-tag">TypeScript</span>
+                                    <span class="tech-tag">Firebase</span>
+                                    <span class="tech-tag">Mobile First</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.instagram.com/futdeal.oficial/" target="_blank"
+                                    class="btn-case-study">
+                                    <i class="fab fa-instagram"></i> Siga no Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Outros Projetos — Carousel -->
+            <div class="other-projects">
+                <div class="other-projects-header">
+                    <h3 class="other-projects-title">Outros <span>Projetos</span></h3>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn" id="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-btn" id="carousel-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="carousel-track" id="projects-carousel">
+
+                    <!-- Helio Montagens -->
+                    <a href="https://heliomontagensteste.netlify.app/" class="mini-card" target="_blank">
+                        <div class="mini-card-image">
+                            <img src="Projetos/outros/HelioMontagem.png" alt="Helio Montagens">
+                        </div>
+                        <div class="mini-card-body">
+                            <div class="mini-card-category">Institucional / Serviços</div>
+                            <div class="mini-card-name">Helio Montagens</div>
+                            <p class="mini-card-desc">Site profissional para serviços de montagem e manutenção.</p>
+                            <div class="mini-card-tech"><span>Site Institucional</span><span>Responsivo</span></div>
+                        </div>
+                    </a>
+
+                    <!-- Gatti Decorações -->
+                    <a href="https://gilded-basbousa-fb61c3.netlify.app/" class="mini-card" target="_blank">
+                        <div class="mini-card-image">
+                            <img src="Projetos/outros/Gatti Decorações.png" alt="Gatti Decorações">
+                        </div>
+                        <div class="mini-card-body">
+                            <div class="mini-card-category">Eventos / Decoração</div>
+                            <div class="mini-card-name">Gatti Decorações</div>
+                            <p class="mini-card-desc">Portfólio elegante para empresa de decorações e eventos.</p>
+                            <div class="mini-card-tech"><span>Design</span><span>Galeria</span></div>
+                        </div>
+                    </a>
+
+                    <!-- Barbearia Vida Nova -->
+                    <a href="https://xandynerd.github.io/BARBEARIA-VIDA-NOVA--Estatica/index.html" class="mini-card"
+                        target="_blank">
+                        <div class="mini-card-image">
+                            <img src="Projetos/outros/barbeariavidanova.png" alt="Barbearia Vida Nova">
+                        </div>
+                        <div class="mini-card-body">
+                            <div class="mini-card-category">Beleza / Serviços</div>
+                            <div class="mini-card-name">Barbearia Vida Nova</div>
+                            <p class="mini-card-desc">Landing page moderna com <strong>sistema de agendamento
+                                    integrado</strong> e catálogo de serviços.
+                            </p>
+                            <div class="mini-card-tech"><span>Agendamento</span><span>HTML/CSS</span></div>
+                        </div>
+                    </a>
+
+                    <!-- Hidden Projects (Future Update) -->
+                    <!--
+                    <a href="#" class="mini-card" target="_blank">
+                        <div class="mini-card-icon"><i class="fas fa-dumbbell"></i></div>
+                        <div class="mini-card-body">
+                            <div class="mini-card-category">Personal Trainer</div>
+                            <div class="mini-card-name">Personal</div>
+                            <p class="mini-card-desc">Landing page para personal trainer com agendamento e apresentação de serviços.</p>
+                            <div class="mini-card-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="mini-card" target="_blank">
+                        <div class="mini-card-icon"><i class="fas fa-spa"></i></div>
+                        <div class="mini-card-body">
+                            <div class="mini-card-category">Estética</div>
+                            <div class="mini-card-name">Suellen Morais Estética</div>
+                            <p class="mini-card-desc">Site institucional para clínica de estética com catálogo de procedimentos.</p>
+                            <div class="mini-card-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="mini-card" target="_blank">
+                        <div class="mini-card-icon"><i class="fas fa-dumbbell"></i></div>
+                        <div class="mini-card-body">
+                            <div class="mini-card-category">Academia</div>
+                            <div class="mini-card-name">Studio Valeci Academia</div>
+                            <p class="mini-card-desc">Site completo para academia com planos, horários e área de contato.</p>
+                            <div class="mini-card-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="mini-card" target="_blank">
+                        <div class="mini-card-icon"><i class="fas fa-dumbbell"></i></div>
+                        <div class="mini-card-body">
+                            <div class="mini-card-category">Academia</div>
+                            <div class="mini-card-name">Academia Design Projeto</div>
+                            <p class="mini-card-desc">Projeto conceito de site para academia com design moderno e responsivo.</p>
+                            <div class="mini-card-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="mini-card" target="_blank">
+                        <div class="mini-card-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="mini-card-body">
+                            <div class="mini-card-category">Academia</div>
+                            <div class="mini-card-name">Geração 220</div>
+                            <p class="mini-card-desc">Landing page para academia com foco em conversão e apresentação de treinos.</p>
+                            <div class="mini-card-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                        </div>
+                    </a>
+                    -->
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Quote Section -->
+    <section class="section quote-section">
         <div class="container">
-            <h2 class="section-title">Projetos Recentes</h2>
+            <div class="quote-block reveal">
+                <div class="quote-marks"><i class="fas fa-quote-left"></i></div>
+                <blockquote class="quote-text">
+                    "Tecnologia não é sobre código, é sobre <span class="accent">evolução contínua</span> e entrega de
+                    valor consistente."
+                </blockquote>
+                <div class="quote-author">
+                    <img src="assets/perfil02.png" alt="Alexandre Silva Ferreira" class="quote-avatar">
+                    <div>
+                        <strong>Alexandre Silva Ferreira</strong>
+                        <span>Full Stack Developer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="carousel-container">
-                <div class="projects-carousel">
-                    <!-- Project Card 1 -->
-                    <article class="project-card">
-                        <div class="project-img placeholder-img"></div>
-                        <div class="project-content">
-                            <h3>Projeto Exemplo 1</h3>
-                            <p>Uma breve descrição do projeto, as tecnologias usadas e o problema que ele resolve.</p>
-                            <div class="project-tags">
-                                <span>React</span>
-                                <span>Node</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project Card 2 -->
-                    <article class="project-card">
-                        <div class="project-img placeholder-img"></div>
-                        <div class="project-content">
-                            <h3>Projeto Exemplo 2</h3>
-                            <p>Descrição de outro projeto incrível que demonstra suas capacidades técnicas.</p>
-                            <div class="project-tags">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JS</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project Card 3 -->
-                    <article class="project-card">
-                        <div class="project-img placeholder-img"></div>
-                        <div class="project-content">
-                            <h3>Projeto Exemplo 3</h3>
-                            <p>Mais um projeto para fechar a linha com chave de ouro.</p>
-                            <div class="project-tags">
-                                <span>Python</span>
-                                <span>Django</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- Project Card 4 (Example for scrolling) -->
-                    <article class="project-card">
-                        <div class="project-img placeholder-img"></div>
-                        <div class="project-content">
-                            <h3>Projeto Futuro</h3>
-                            <p>Espaço reservado para seus futuros projetos incríveis.</p>
-                            <div class="project-tags">
-                                <span>Vue</span>
-                                <span>Firebase</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            </div>
-                        </div>
-                    </article>
+    <!-- Technical Approach Section -->
+    <section id="approach" class="section approach-section">
+        <div class="container">
+            <h2 class="section-title">Minha Abordagem <span class="accent">Técnica</span></h2>
+            <div class="approach-underline"></div>
+            <div class="approach-grid">
+                <div class="approach-card reveal" style="transition-delay: 0.1s;">
+                    <div class="approach-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Arquitetura Escalável</h3>
+                    <p>Desenvolvimento focado em desacoplamento e manutenibilidade. Utilizo padrões como Clean
+                        Architecture e DDD para garantir que o sistema cresça sem se tornar um legado difícil de manter.
+                    </p>
+                </div>
+                <div class="approach-card reveal" style="transition-delay: 0.2s;">
+                    <div class="approach-icon"><i class="fas fa-plug"></i></div>
+                    <h3>APIs & Integrações</h3>
+                    <p>Experiência robusta conectando sistemas heterogêneos. De gateways de pagamento (Stripe, Abacate
+                        Pay) a ERPs legados, garanto fluxo de dados seguro e resiliente a falhas.</p>
+                </div>
+                <div class="approach-card reveal" style="transition-delay: 0.3s;">
+                    <div class="approach-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Performance & Segurança</h3>
+                    <p>Otimização de queries SQL, implementação de caching estratégico e adesão às melhores práticas de
+                        segurança desde a primeira linha de código.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <div class="container contact-container">
-            <h2 class="section-title">Vamos Conversar?</h2>
-            <p class="contact-text">Estou disponível para novos projetos e oportunidades. Entre em contato!</p>
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-layout reveal">
+                <div class="contact-left">
+                    <h2 class="contact-heading">Vamos trabalhar <span class="accent">juntos?</span></h2>
+                    <p class="contact-desc">Estou sempre interessado em ouvir sobre novos projetos e oportunidades. Se
+                        você tem uma ideia ou precisa de ajuda técnica, entre em contato.</p>
 
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>XandyNerd@gmail.com</span>
+                    <div class="contact-links">
+                        <a href="mailto:prontxcode@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <span>prontxcode@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/5531994148015" target="_blank" class="contact-link">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <span>(31) 9 9414-8015</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/alexandre-silva-ferreira-8a0105291/" target="_blank"
+                            class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <strong>LinkedIn</strong>
+                                <span>Alexandre Silva Ferreira</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/XandyNerd?tab=repositories" target="_blank" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <strong>GitHub</strong>
+                                <span>github.com/XandyNerd</span>
+                            </div>
+                        </a>
                     </div>
-                    <div class="info-item">
-                        <i class="fab fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/in/alexandre-silva-ferreira-8a0105291/"
-                            target="_blank">Alexandre Silva Ferreira</a>
-                    </div>
-                    <div class="info-item">
-                        <i class="fab fa-github"></i>
-                        <span>github.com/seu-usuario</span>
+
+                    <div class="contact-social">
+                        <a href="https://instagram.com/alexandresilva.dev" target="_blank" title="Instagram Pessoal">
+                            <i class="fab fa-instagram"></i> @alexandresilva.dev
+                        </a>
+                        <a href="https://instagram.com/prontx_code" target="_blank" title="Instagram Empresa">
+                            <i class="fab fa-instagram"></i> @prontx_code
+                        </a>
                     </div>
                 </div>
 
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Seu Nome" required>
+                <div class="contact-right">
+                    <div class="contact-cta-card">
+                        <div class="cta-icon"><i class="fas fa-rocket"></i></div>
+                        <h3>Pronto para começar?</h3>
+                        <p>Me mande uma mensagem e vamos transformar sua ideia em realidade.</p>
+                        <a href="https://wa.me/5531994148015" target="_blank" class="cta-btn">
+                            <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+                        </a>
+                        <a href="mailto:prontxcode@gmail.com" class="cta-btn cta-btn-outline">
+                            <i class="fas fa-envelope"></i> Enviar Email
+                        </a>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Seu Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
@@ -375,15 +655,20 @@
         <div class="container footer-content">
             <p>&copy; 2025 Alexandre Silva Ferreira. Todos os direitos reservados.</p>
             <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/alexandre-silva-ferreira-8a0105291/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/XandyNerd?tab=repositories" target="_blank"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://instagram.com/alexandresilva.dev" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5531994148015" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/code-snippet.js"></script>
+    <script src="js/earth.js"></script>
 </body>
 
 </html>

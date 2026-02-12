@@ -1,7 +1,9 @@
 /* Variables & Reset */
 :root {
-    --bg-color: #0a0a0a;
-    --bg-secondary: #111111;
+    --bg-color: #0B0F19;
+    /* Standardized Deep Space */
+    --bg-secondary: #0B0F19;
+    /* Matching secondary */
     --text-primary: #ffffff;
     --text-secondary: #a0a0a0;
     --accent-color: #00f2ff;
@@ -639,33 +641,7 @@ img {
     font-size: 0.7rem;
 }
 
-/* Carousel Dots */
-.carousel-dots {
-    display: flex;
-    gap: 8px;
-    margin-top: 16px;
-    justify-content: center;
-}
 
-.carousel-dot {
-    width: 24px;
-    height: 3px;
-    border-radius: 2px;
-    border: none;
-    background: rgba(255, 255, 255, 0.15);
-    cursor: pointer;
-    padding: 0;
-    transition: all 0.4s ease;
-}
-
-.carousel-dot.active {
-    background: var(--accent-color);
-    width: 36px;
-}
-
-.carousel-dot:hover {
-    background: rgba(0, 242, 255, 0.4);
-}
 
 
 /* About Section */
@@ -1130,4 +1106,92 @@ footer {
     border-style: solid;
     border-width: 10px 8px 0 0;
     border-color: #fff transparent transparent transparent;
+}
+
+/* =========================================
+   Easter Egg: Shooting Star
+   ========================================= */
+.shooting-star {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    /* Just above background, behind content */
+    overflow: hidden;
+}
+
+.shooting-star::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+        0 0 0 8px rgba(255, 255, 255, 0.1),
+        0 0 20px rgba(255, 255, 255, 1);
+    animation: animateShoot 12s linear infinite;
+    animation-delay: 5s;
+    opacity: 0;
+}
+
+.shooting-star::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+    animation: animateShootTail 12s linear infinite;
+    animation-delay: 5s;
+    opacity: 0;
+}
+
+@keyframes animateShoot {
+    0% {
+        transform: translate(300px, -300px) rotate(315deg) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    20% {
+        transform: translate(-500px, 500px) rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-500px, 500px) rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
+}
+
+@keyframes animateShootTail {
+    0% {
+        transform: translate(300px, -300px) rotate(315deg) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    20% {
+        transform: translate(-500px, 500px) rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-500px, 500px) rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
 }
