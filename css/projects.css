@@ -786,13 +786,13 @@
     display: block;
     object-fit: cover;
     object-position: top center;
-    transform: translateY(0);
+    transition: object-position 0.5s ease;
+    /* Fast reset */
 }
 
-/* Auto-scroll removed: show top of image */
+/* Auto-scroll active: scroll to bottom over 12s */
+.mini-card.center:hover .mini-card-image img,
 .mini-card.center .mini-card-image img {
-    transform: translateY(0);
-    object-fit: cover;
-    object-position: top center;
-    height: 100%;
+    object-position: bottom center;
+    transition: object-position 12s ease-in-out;
 }
