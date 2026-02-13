@@ -790,9 +790,5 @@
     /* Fast reset */
 }
 
-/* Auto-scroll active: scroll to bottom over 12s */
-.mini-card.center:hover .mini-card-image img,
-.mini-card.center .mini-card-image img {
-    object-position: bottom center;
-    transition: object-position 12s ease-in-out;
-}
+/* Auto-scroll active: handled by JS now for mobile consistency */
+/* .mini-card.center .mini-card-image img { ... } removed */

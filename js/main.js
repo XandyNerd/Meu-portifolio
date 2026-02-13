@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Force scroll to top on mobile/refresh
+    if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
 
     // =========================================
     //  Galaxy Theme & Scroll Reveal
@@ -298,11 +303,31 @@ document.addEventListener('DOMContentLoaded', () => {
             // Update each card
             cards.forEach((card, i) => {
                 card.classList.remove('visible', 'center');
+                const img = card.querySelector('.mini-card-image img');
+
+                // Reset styles by default
+                if (img) {
+                    img.style.transition = 'none';
+                    img.style.objectPosition = 'top center';
+                }
 
                 if (i === centerIndex) {
                     card.style.display = 'block';
                     card.style.order = '2';
                     card.classList.add('center');
+
+                    // Trigger scroll animation for center card
+                    if (img) {
+                        // Force reflow
+                        void img.offsetWidth;
+
+                        // Start scroll after a short delay
+                        setTimeout(() => {
+                            img.style.transition = 'object-position 12s ease-in-out';
+                            img.style.objectPosition = 'bottom center';
+                        }, 500);
+                    }
+
                 } else if (i === leftIdx) {
                     card.style.display = 'block';
                     card.style.order = '1';
